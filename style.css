@@ -18,14 +18,8 @@ body {
     height: 100vh;
     /* Hauteur égale à la fenêtre du navigateur */
 
-    margin: 0;
-    /* Supprime les marges par défaut */
-
     /* Image de fond */
     background-image: url("arriere-plans-de-bureau-aube-autriche-brouillard-1323550.jpg");
-
-    /* Empêche la répétition de l'image */
-    /* background-repeat: no-repeat;*/
 
     /* Centre l'image */
     background-position: center;
@@ -33,4 +27,24 @@ body {
     /* L'image couvre toute la fenêtre */
     background-size: cover;
 }
+.countdown {
+    display: inline-block;
+    /*indique que la largeur du compteur doit s'adapter uniquement à son contenu.*/
+    font-size: 4rem;
+    /* Taille du texte */
 
+    background: orchid;
+    /* Fond */
+
+    padding: 10px 20px;
+    /* Marges intérieures */
+
+    border-radius: 35px;
+    /* Coins arrondis */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    /* Ombre portée */
+
+    transition: transform 0.6s ease, margin 0.6s ease;
+    /* Anime la transparence pendant 0,5 seconde */
+}
