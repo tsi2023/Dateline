@@ -21,5 +21,26 @@ function updateCountdown() {
 
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
+function toggleCard() {
+    const countdown = document.getElementById("countdown");
+    const card = document.getElementById("inviteCard");
+    const arrow = document.getElementById("arrowBtn");
+
+    card.classList.toggle("open");
+    arrow.classList.toggle("open");
+
+    countdown.classList.toggle("compact");
+}
+const scene = document.getElementById("cardScene");
+const bouton = document.getElementById("btn");
+
+bouton.addEventListener("click", function () {
+
+    scene.classList.toggle("open");
+
+    bouton.textContent = scene.classList.contains("open")
+        ? bouton.dataset.back
+        : bouton.dataset.front;
+});
 
 

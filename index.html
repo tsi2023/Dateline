@@ -1,18 +1,39 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<!DOCTYPE html> 
+<html lang="fr">
     <head>
-        <title>Dateline</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Compte à rebours</title>
         <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
-        <div class="countdown" id="countdown"></div>
+
+        <div class="container">
+            <div class="countdown" id="countdown"></div>
+            <div class="invite-card" id="inviteCard">
+                <button class="arrow-btn" id="arrowBtn" onclick="toggleCard()">↓</button>
+                <div class="card-content">
+                    <button class="button" id="btn" data-front="Italiano" data-back="Français">
+                        Italino
+                    </button>
+                    <div class="scene" id="cardScene">
+                        <div class="card">
+                            <div class="face front">
+                                <p>
+                                    Bonjour!
+                                </p> 
+                            </div>
+                            <div class="face back">
+                                <p> 
+                                    Ciao
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
