@@ -79,8 +79,11 @@ body {
     padding: 0 20px;
     /* Marges intérieures horizontales */
 
-    width: min(1100px, 90vw);
-    /* Largeur de la carte */
+    width: 90%;
+    max-width: 1100px;
+    
+    box-sizing: border-box;
+    /*inclure le padding dans la largeur totale de l'élément.*/
 
     margin: 20px auto;
     /* Centre horizontalement */
@@ -237,7 +240,7 @@ body {
 }
 /* la profondeur sans cela il n'y a pas de effet 3D'*/
 .scene{
-    width: 1000px;
+    width: min(1000px, 90vw);
     height:300px;
     margin: 0 auto;
     perspective: 1000px;
@@ -274,4 +277,29 @@ body {
     display: block; /*le bouton devient un élément de type bloc.*/
     margin-left: auto; /*laisse le navigateur gérer la marge gauche.*/
     margin-right: auto; /*fait la même chose à droite.*/
+}
+/* ========================= */
+/* Adaptation smartphone */
+/* ========================= */
+
+@media screen and (max-width: 600px) {
+    /* Applique ces règles uniquement aux écrans de 600px maximum */
+
+    .scene {
+        height: 350px;
+        /* Augmente la hauteur de la carte 3D sur smartphone */
+    }
+
+    .countdown {
+        font-size: 2rem;
+        /* Réduit la taille du texte du compteur */
+    }
+
+    .face {
+        padding: 12px;
+        /* Réduit les marges intérieures de la carte */
+
+        text-align: center;
+        /* Centre le texte horizontalement */
+    }
 }
