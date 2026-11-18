@@ -21,6 +21,9 @@ function updateCountdown() {
 
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
+
+const music = document.getElementById("music");
+
 function toggleCard() {
     const countdown = document.getElementById("countdown");
     const card = document.getElementById("inviteCard");
@@ -30,6 +33,11 @@ function toggleCard() {
     arrow.classList.toggle("open");
 
     countdown.classList.toggle("compact");
+    if (inviteCard.classList.contains("open")) {
+        music.play();
+    } else {
+        music.pause();
+    }
 }
 const scene = document.getElementById("cardScene");
 const bouton = document.getElementById("btn");
@@ -42,5 +50,7 @@ bouton.addEventListener("click", function () {
         ? bouton.dataset.back
         : bouton.dataset.front;
 });
+
+
 
 
