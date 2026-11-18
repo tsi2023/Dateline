@@ -53,8 +53,8 @@ body {
 /* ========================= */
 
 .invite-card {
-    margin-top: 0px;
-    /* Espace entre le compteur et la carte */
+    width: 100%;
+    margin-top: 0;
 }
 /* ========================= */
 /* Contenu de la carte */
@@ -239,10 +239,14 @@ body {
     transform-style: preserve-3d; /*garde les faces dans l'espace 3d pour rendre le verto et le recto bien séparé'*/
 }
 /* la profondeur sans cela il n'y a pas de effet 3D'*/
-.scene{
-    width: min(1000px, 90vw);
-    height:300px;
+.scene {
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+
     margin: 0 auto;
+
+    box-sizing: border-box;
     perspective: 1000px;
 }
 
@@ -283,23 +287,17 @@ body {
 /* ========================= */
 
 @media screen and (max-width: 600px) {
-    /* Applique ces règles uniquement aux écrans de 600px maximum */
 
     .scene {
         height: 350px;
-        /* Augmente la hauteur de la carte 3D sur smartphone */
     }
 
     .countdown {
         font-size: 2rem;
-        /* Réduit la taille du texte du compteur */
     }
 
     .face {
         padding: 12px;
-        /* Réduit les marges intérieures de la carte */
-
         text-align: center;
-        /* Centre le texte horizontalement */
     }
 }
